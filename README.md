@@ -1,46 +1,79 @@
+
 # TargetBusinessCaseStudySQL
 This repository serves as a comprehensive business case study of a leading retail supermarket, leveraging SQL to perform data analysis and extract actionable insights, supporting strategic decision-making for the organization.
 
-🛒 TARGET - Retail_Analysis 🛒
-📑This Repo serves as a Business case study. Providing Solution , Insights and Recommendation for the growth in their Revenue through sql queries.
+Context:
 
-🔎This SQL solutions done in Google BigQuery
+![target](https://github.com/user-attachments/assets/047141a3-0a98-4dd8-a447-123bf8979633)
 
-🔗If you have any questions, reach out to me on Linkedin
-🚀 Welcome to the Target Data Analysis project! 🎉
+Target is a globally renowned brand and a prominent retailer in the United States. Target makes itself a preferred shopping destination by offering outstanding value, inspiration, innovation and an exceptional guest experience that no other retailer can deliver.
 
-As a data scientist at Target, you've been given the exciting opportunity to analyze 100k orders from 2016 to 2018 made at Target in Brazil. 🌎🇧🇷
+This particular business case focuses on the operations of Target in Brazil and provides insightful information about 100,000 orders placed between 2016 and 2018. The dataset offers a comprehensive view of various dimensions including the order status, price, payment and freight performance, customer location, product attributes, and customer reviews.
 
-📚 The dataset is available in 8 csv files:
+By analyzing this extensive dataset, it becomes possible to gain valuable insights into Target's operations in Brazil. The information can shed light on various aspects of the business, such as order processing, pricing strategies, payment and shipping efficiency, customer demographics, product characteristics, and customer satisfaction levels.
 
-customers.csv 🧑‍🤝‍🧑
-geolocation.csv 🗺️
-order_items.csv 🛍️
-payments.csv 💳
-reviews.csv 📝
-orders.csv 📦
-products.csv 📝
-sellers.csv 👩‍💼
-🔍 So, what does 'good' look like? We'll import the dataset and perform exploratory analysis steps to check the structure, characteristics, data types, and time period for which the data is given. We'll also look at the cities and states of customers who ordered during the given period. 🕵️‍♀️
+___________________________________________________________________________________________________________
 
-🔍 In-depth Exploration:
+Dataset: https://drive.google.com/drive/folders/1TGEc66YKbD443nslRi1bWgVd238gJCnb
 
-Is there a growing trend on e-commerce in Brazil? 📈 How can we describe the complete scenario? 🤔 Can we see some seasonality with peaks at specific months? ❄️☀️
-What time do Brazilian customers tend to buy? 🕒 Do they prefer to shop at dawn, morning, afternoon, or night? 🌅🌇🌄🌃
-Evolution of E-commerce orders in the Brazil region:
-Get month on month orders by states 📊
-Distribution of customers across the states in Brazil 🗺️👥
-Impact on Economy: Analyze the money movement by e-commerce by looking at order prices, freight and others.
-Get % increase in cost of orders from 2017 to 2018 (include months between Jan to Aug only) - You can use “payment_value” column in payments table 💰
-Mean & Sum of price and freight value by customer state 💵🚛
-Analysis on sales, freight and delivery time 📊🚚
-Calculate days between purchasing, delivering and estimated delivery 📅
-Find time_to_delivery & diff_estimated_delivery ⏳
-Group data by state, take mean of freight_value, time_to_delivery, diff_estimated_delivery 📊
-Sort the data to get the following:
-Top 5 states with highest/lowest average freight value - sort in desc/asc limit 5 📉📈
-Top 5 states with highest/lowest average time to delivery 🚛⏰
-Top 5 states where delivery is really fast/ not so fast compared to estimated date 🚚⚡
-Payment type analysis: 💳
-Month over Month count of orders for different payment types 📊
-Count of orders based on the no. of payment installments 🔢
+The data is available in 8 csv files:
+
+1. customers.csv 
+2. geolocation.csv 
+3. order_items.csv 
+4. payments.csv 
+5. reviews.csv 
+6. orders.csv 
+7. products.csv 
+8. sellers.csv 
+
+___________________________________________________________________________________________________________
+
+Dataset schema:
+
+![image](https://github.com/user-attachments/assets/e1327875-3de1-422d-a750-3ebb99ed4bb9)
+
+
+___________________________________________________________________________________________________________
+
+Problem Statement:
+
+Assuming you are a data analyst/ scientist at Target, you have been assigned the task of analyzing the given dataset to extract valuable insights and provide actionable recommendations.
+
+1.Exploratory analysis steps like checking the structure & characteristics of the dataset:
+
+  * Data type of all columns in the "customers" table.
+  * Get the time range between which the orders were placed.
+  * Count the Cities & States of customers who ordered during the given period.
+
+2.In-depth Exploration:
+
+  * Is there a growing trend in the no. of orders placed over the past years?  
+  * Can we see some kind of monthly seasonality in terms of the no. of orders being placed?
+  * During what time of the day, do the Brazilian customers mostly place their orders? (Dawn, Morning, Afternoon or Night)
+
+3.Evolution of E-commerce orders in the Brazil region:
+
+  * Get the month on month no. of orders placed in each state.
+  * How are the customers distributed across all the states?
+
+4.Impact on Economy: Analyze the money movement by e-commerce by looking at order prices, freight and others.
+
+  * Get the % increase in the cost of orders from year 2017 to 2018 (include months between Jan to Aug only).
+  * You can use the "payment_value" column in the payments table to get the cost of orders.
+  * Calculate the Total & Average value of order price for each state.
+  * Calculate the Total & Average value of order freight for each state.
+
+5. Analysis based on sales, freight and delivery time.
+   
+  * Find the no. of days taken to deliver each order from the order’s purchase date as delivery time.
+  * Also, calculate the difference (in days) between the estimated & actual delivery date of an order. Do this in a single query.
+  * Find out the top 5 states with the highest & lowest average freight value.
+  * Find out the top 5 states with the highest & lowest average delivery time.
+  * Find out the top 5 states where the order delivery is really fast as compared to the estimated date of delivery.
+
+6. Analysis based on the payments:
+  * Find the month on month no. of orders placed using different payment types.
+  * Find the no. of orders placed on the basis of the payment installments that have been paid.
+
+___________________________________________________________________________________________________________
